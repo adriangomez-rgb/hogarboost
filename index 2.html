@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hogar Bost | Servicios integrales del hogar</title>
+  <meta name="description" content="Hogar Bost: servicios integrales del hogar en Madrid y Toledo. Calderas y calefacción, electricidad, fontanería y mantenimiento.">
+  <style>
+    :root{
+      --navy:#10253f; --blue:#1769aa; --light:#f4f7fa; --text:#1c2938;
+      --accent:#f2a900; --white:#fff; --muted:#64748b;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:Arial,Helvetica,sans-serif;color:var(--text);background:#fff;line-height:1.6}
+    a{text-decoration:none;color:inherit}
+    .container{width:min(1120px,92%);margin:auto}
+    header{background:rgba(255,255,255,.96);position:sticky;top:0;z-index:10;border-bottom:1px solid #e7edf3}
+    nav{height:74px;display:flex;align-items:center;justify-content:space-between}
+    .logo{font-size:25px;font-weight:800;color:var(--navy);letter-spacing:-.5px}
+    .logo span{color:var(--blue)}
+    .menu{display:flex;gap:28px;font-size:15px;font-weight:600}
+    .menu a:hover{color:var(--blue)}
+    .nav-btn{background:var(--blue);color:white;padding:11px 18px;border-radius:9px}
+    .hero{background:linear-gradient(120deg,var(--navy),#173e65);color:#fff;padding:92px 0 88px}
+    .hero-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:55px;align-items:center}
+    .eyebrow{display:inline-block;background:rgba(242,169,0,.16);color:#ffd166;padding:7px 12px;border-radius:999px;font-weight:700;font-size:13px;margin-bottom:18px}
+    h1{font-size:clamp(42px,6vw,68px);line-height:1.04;letter-spacing:-2px;margin-bottom:22px}
+    .hero p{font-size:19px;color:#dbe7f3;max-width:650px;margin-bottom:30px}
+    .buttons{display:flex;gap:13px;flex-wrap:wrap}
+    .btn{display:inline-block;padding:14px 22px;border-radius:9px;font-weight:800}
+    .btn-primary{background:var(--accent);color:#18212a}
+    .btn-secondary{border:1px solid rgba(255,255,255,.35);color:#fff}
+    .hero-card{background:#fff;color:var(--text);padding:30px;border-radius:18px;box-shadow:0 20px 50px rgba(0,0,0,.2)}
+    .hero-card h3{font-size:23px;color:var(--navy);margin-bottom:12px}
+    .hero-card p{font-size:15px;color:var(--muted);margin-bottom:18px}
+    .quick{display:grid;gap:10px}
+    .quick div{background:var(--light);padding:12px 14px;border-radius:9px;font-weight:700}
+    section{padding:78px 0}
+    .section-head{text-align:center;max-width:700px;margin:0 auto 42px}
+    .section-head h2{font-size:38px;color:var(--navy);letter-spacing:-1px;margin-bottom:10px}
+    .section-head p{color:var(--muted)}
+    .services{background:var(--light)}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .service{background:#fff;padding:28px;border-radius:15px;border:1px solid #e5ebf0;transition:.2s}
+    .service:hover{transform:translateY(-4px);box-shadow:0 12px 30px rgba(16,37,63,.08)}
+    .icon{font-size:34px;margin-bottom:15px}
+    .service h3{color:var(--navy);margin-bottom:8px;font-size:21px}
+    .service p{color:var(--muted);font-size:15px}
+    .why{display:grid;grid-template-columns:1fr 1fr;gap:55px;align-items:center}
+    .why h2{font-size:40px;color:var(--navy);line-height:1.1;margin-bottom:18px}
+    .why p{color:var(--muted);margin-bottom:22px}
+    .checks{display:grid;gap:13px}
+    .check{display:flex;gap:11px;align-items:flex-start}
+    .check b{color:var(--blue)}
+    .panel{background:var(--navy);border-radius:20px;padding:38px;color:#fff}
+    .panel h3{font-size:27px;margin-bottom:12px}
+    .panel p{color:#d8e3ed;margin-bottom:20px}
+    .zones{background:var(--light);text-align:center}
+    .zone-list{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
+    .zone{background:#fff;border:1px solid #dce5ed;padding:12px 18px;border-radius:999px;font-weight:700;color:var(--navy)}
+    .contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:35px}
+    .contact-box h2{font-size:39px;color:var(--navy);line-height:1.1;margin-bottom:15px}
+    .contact-box p{color:var(--muted);margin-bottom:20px}
+    form{background:var(--light);padding:28px;border-radius:16px}
+    label{display:block;font-weight:700;font-size:14px;margin-bottom:6px}
+    input,textarea,select{width:100%;padding:13px;border:1px solid #d5dee7;border-radius:8px;margin-bottom:14px;font:inherit;background:#fff}
+    textarea{min-height:120px;resize:vertical}
+    button{border:0;cursor:pointer;width:100%;font:inherit}
+    footer{background:#0b1b2e;color:#b9c7d5;padding:32px 0;text-align:center;font-size:14px}
+    .floating{position:fixed;right:18px;bottom:18px;background:#25d366;color:white;width:58px;height:58px;border-radius:50%;display:grid;place-items:center;font-size:27px;box-shadow:0 8px 25px rgba(0,0,0,.2);z-index:20}
+    @media(max-width:800px){
+      .menu{display:none}.hero-grid,.why,.contact-grid{grid-template-columns:1fr}.grid{grid-template-columns:1fr 1fr}
+      .hero{padding:65px 0}.hero-card{display:none}
+    }
+    @media(max-width:560px){.grid{grid-template-columns:1fr}section{padding:58px 0}h1{font-size:45px}}
+  </style>
+</head>
+<body>
+<header>
+  <div class="container">
+    <nav>
+      <div class="logo">HOGAR <span>BOST</span></div>
+      <div class="menu">
+        <a href="#servicios">Servicios</a>
+        <a href="#nosotros">Nosotros</a>
+        <a href="#zonas">Zonas</a>
+        <a href="#contacto">Contacto</a>
+        <a class="nav-btn" href="#contacto">Presupuesto</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <span class="eyebrow">MADRID · TOLEDO</span>
+        <h1>Soluciones para tu hogar, sin complicaciones.</h1>
+        <p>Servicios integrales para el mantenimiento y reparación de tu vivienda: calderas y calefacción, electricidad, fontanería y mucho más.</p>
+        <div class="buttons">
+          <a class="btn btn-primary" href="#contacto">Solicitar presupuesto</a>
+          <a class="btn btn-secondary" href="#servicios">Ver servicios</a>
+        </div>
+      </div>
+      <div class="hero-card">
+        <h3>Hogar Bost</h3>
+        <p>Un solo equipo para resolver las necesidades de mantenimiento de tu hogar.</p>
+        <div class="quick">
+          <div>🔥 Calderas y calefacción</div>
+          <div>⚡ Electricidad</div>
+          <div>💧 Fontanería</div>
+          <div>🔧 Mantenimiento y reparaciones</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="servicios" class="services">
+    <div class="container">
+      <div class="section-head">
+        <h2>Nuestros servicios</h2>
+        <p>Profesionales para las tareas que tu hogar necesita.</p>
+      </div>
+      <div class="grid">
+        <article class="service"><div class="icon">🔥</div><h3>Calderas y calefacción</h3><p>Revisión, mantenimiento y reparación de sistemas de calefacción.</p></article>
+        <article class="service"><div class="icon">⚡</div><h3>Electricidad</h3><p>Instalaciones, averías, enchufes, iluminación y trabajos eléctricos.</p></article>
+        <article class="service"><div class="icon">💧</div><h3>Fontanería</h3><p>Fugas, grifos, sanitarios, tuberías y reparaciones del hogar.</p></article>
+        <article class="service"><div class="icon">❄️</div><h3>Climatización</h3><p>Mantenimiento y soluciones para aire acondicionado y climatización.</p></article>
+        <article class="service"><div class="icon">🛠️</div><h3>Reparaciones</h3><p>Pequeñas y grandes reparaciones para mantener tu vivienda en buen estado.</p></article>
+        <article class="service"><div class="icon">🏠</div><h3>Servicios integrales</h3><p>Una solución coordinada para diferentes necesidades de tu hogar.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="nosotros">
+    <div class="container why">
+      <div>
+        <h2>Tu hogar en buenas manos.</h2>
+        <p>En Hogar Bost queremos facilitarte el mantenimiento de tu vivienda con un servicio cercano, profesional y transparente.</p>
+        <div class="checks">
+          <div class="check"><b>✓</b><span>Atención personalizada</span></div>
+          <div class="check"><b>✓</b><span>Presupuestos claros antes de realizar el trabajo</span></div>
+          <div class="check"><b>✓</b><span>Un único contacto para diferentes servicios</span></div>
+          <div class="check"><b>✓</b><span>Servicio en Madrid y Toledo</span></div>
+        </div>
+      </div>
+      <div class="panel">
+        <h3>¿Tienes una avería o necesitas un trabajo?</h3>
+        <p>Cuéntanos qué necesitas y estudiaremos la mejor solución para tu hogar.</p>
+        <a class="btn btn-primary" href="#contacto">Pedir presupuesto</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="zonas" class="zones">
+    <div class="container">
+      <div class="section-head">
+        <h2>Trabajamos en Madrid y Toledo</h2>
+        <p>Podemos ampliar esta sección con las localidades concretas donde prestarás servicio.</p>
+      </div>
+      <div class="zone-list">
+        <span class="zone">Madrid</span>
+        <span class="zone">Comunidad de Madrid</span>
+        <span class="zone">Toledo</span>
+        <span class="zone">Provincia de Toledo</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="contacto">
+    <div class="container contact-grid">
+      <div class="contact-box">
+        <h2>Cuéntanos qué necesitas.</h2>
+        <p>Déjanos tus datos y una breve descripción del trabajo. Sustituiremos este formulario por tus datos reales de contacto cuando los tengas.</p>
+        <p><strong>Hogar Bost</strong><br>Servicios integrales del hogar<br>Madrid · Toledo</p>
+      </div>
+      <<form action="https://formsubmit.co/serviciosintegralesdelhogar82@gmail.com" method="POST">
+
+  <input type="hidden" name="_subject" value="Nueva solicitud de presupuesto - Hogar Bost">
+  <input type="hidden" name="_captcha" value="false">
+
+  <label>Nombre</label>
+  <input required type="text" name="nombre" placeholder="Tu nombre">
+
+  <label>Teléfono</label>
+  <input required type="tel" name="telefono" placeholder="Tu teléfono">
+
+  <label>Servicio</label>
+  <select name="servicio">
+    <option>Calderas y calefacción</option>
+    <option>Electricidad</option>
+    <option>Fontanería</option>
+    <option>Climatización</option>
+    <option>Otro</option>
+  </select>
+
+  <label>¿Qué necesitas?</label>
+  <textarea name="mensaje" placeholder="Cuéntanos brevemente el problema o trabajo..."></textarea>
+
+  <button class="btn btn-primary" type="submit">
+    Solicitar presupuesto
+  </button>
+
+</form>
+    </div>
+  </section>
+</main>
+
+<a <a class="floating" href="https://wa.me/34654630623?text=Hola%20Hogar%20Bost%2C%20necesito%20un%20presupuesto." target="_blank" aria-label="WhatsApp">☏</a>
+<footer>© 2026 Hogar Bost · Servicios integrales del hogar · Madrid y Toledo</footer>
+</body>
+</html>
