@@ -1,458 +1,523 @@
 <!doctype html>
 <html lang="es">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Hogar Boost | Fontanería, electricidad y calefacción en Madrid y Toledo</title>
+<title>Hogar Boost | Servicios integrales del hogar en Madrid y Toledo</title>
 
-  <meta name="description" content="Hogar Boost ofrece servicios de fontanería, electricidad, calefacción, calderas, climatización y reparaciones del hogar en Madrid y Toledo. Solicita presupuesto.">
+<meta name="description" content="Hogar Boost ofrece fontanería, electricidad, calefacción, calderas, climatización y reparaciones del hogar en Madrid y Toledo. Solicita tu presupuesto.">
 
-  <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://hogarboost.es/">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://hogarboost.es/">
 
-  <meta property="og:title" content="Hogar Boost | Servicios integrales del hogar">
-  <meta property="og:description" content="Fontanería, electricidad, calefacción, calderas, climatización y reparaciones en Madrid y Toledo.">
-  <meta property="og:url" content="https://hogarboost.es/">
-  <meta property="og:type" content="website">
+<style>
+:root{
+  --navy:#0d2238;
+  --blue:#1769aa;
+  --blue2:#2585d1;
+  --light:#f4f7fa;
+  --text:#182635;
+  --muted:#64748b;
+  --yellow:#f2a900;
+  --green:#25d366;
+  --white:#ffffff;
+}
 
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "Hogar Boost",
-    "url": "https://hogarboost.es/",
-    "telephone": "+34654630623",
-    "description": "Servicios integrales del hogar: fontanería, electricidad, calefacción, calderas, climatización y reparaciones.",
-    "areaServed": [
-      {
-        "@type": "AdministrativeArea",
-        "name": "Comunidad de Madrid"
-      },
-      {
-        "@type": "AdministrativeArea",
-        "name": "Provincia de Toledo"
-      }
-    ],
-    "serviceType": [
-      "Fontanería",
-      "Electricidad",
-      "Calefacción",
-      "Calderas",
-      "Climatización",
-      "Reparaciones del hogar"
-    ]
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:Arial,Helvetica,sans-serif;
+  color:var(--text);
+  line-height:1.6;
+  background:#fff;
+}
+
+a{
+  text-decoration:none;
+  color:inherit;
+}
+
+.container{
+  width:min(1120px,92%);
+  margin:auto;
+}
+
+/* HEADER */
+
+header{
+  position:sticky;
+  top:0;
+  z-index:100;
+  background:rgba(255,255,255,.97);
+  border-bottom:1px solid #e5ebf0;
+  backdrop-filter:blur(8px);
+}
+
+nav{
+  min-height:72px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+}
+
+.logo{
+  font-size:25px;
+  font-weight:900;
+  color:var(--navy);
+}
+
+.logo span{
+  color:var(--blue);
+}
+
+.menu{
+  display:flex;
+  align-items:center;
+  gap:25px;
+  font-size:15px;
+  font-weight:700;
+}
+
+.menu a:hover{
+  color:var(--blue);
+}
+
+.nav-button{
+  background:var(--blue);
+  color:#fff!important;
+  padding:11px 17px;
+  border-radius:9px;
+}
+
+/* HERO */
+
+.hero{
+  background:
+    radial-gradient(circle at 85% 20%,rgba(37,133,209,.25),transparent 30%),
+    linear-gradient(120deg,#0b2035,#17466f);
+  color:#fff;
+  padding:90px 0;
+}
+
+.hero-grid{
+  display:grid;
+  grid-template-columns:1.2fr .8fr;
+  gap:55px;
+  align-items:center;
+}
+
+.badge{
+  display:inline-block;
+  background:rgba(242,169,0,.15);
+  color:#ffd166;
+  padding:8px 14px;
+  border-radius:50px;
+  font-size:13px;
+  font-weight:800;
+  margin-bottom:20px;
+}
+
+h1{
+  font-size:clamp(42px,6vw,68px);
+  line-height:1.03;
+  letter-spacing:-2px;
+  margin-bottom:22px;
+}
+
+.hero-text{
+  font-size:19px;
+  color:#dce8f2;
+  max-width:680px;
+  margin-bottom:30px;
+}
+
+.buttons{
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+}
+
+.btn{
+  display:inline-block;
+  padding:14px 22px;
+  border-radius:10px;
+  font-weight:800;
+}
+
+.btn-primary{
+  background:var(--yellow);
+  color:#18212a;
+}
+
+.btn-blue{
+  background:var(--blue);
+  color:#fff;
+}
+
+.btn-outline{
+  border:1px solid rgba(255,255,255,.4);
+  color:#fff;
+}
+
+.hero-card{
+  background:#fff;
+  color:var(--text);
+  padding:32px;
+  border-radius:20px;
+  box-shadow:0 25px 60px rgba(0,0,0,.25);
+}
+
+.hero-card h2{
+  color:var(--navy);
+  margin-bottom:8px;
+}
+
+.hero-card p{
+  color:var(--muted);
+  margin-bottom:20px;
+}
+
+.quick{
+  display:grid;
+  gap:10px;
+}
+
+.quick div{
+  background:var(--light);
+  padding:12px 14px;
+  border-radius:9px;
+  font-weight:700;
+}
+
+/* SECTIONS */
+
+section{
+  padding:80px 0;
+}
+
+.section-title{
+  text-align:center;
+  max-width:750px;
+  margin:0 auto 45px;
+}
+
+.section-title h2{
+  font-size:40px;
+  line-height:1.1;
+  color:var(--navy);
+  margin-bottom:12px;
+}
+
+.section-title p{
+  color:var(--muted);
+}
+
+/* SERVICES */
+
+.services{
+  background:var(--light);
+}
+
+.service-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+}
+
+.service{
+  background:#fff;
+  border:1px solid #e2e9ef;
+  border-radius:17px;
+  padding:30px;
+  transition:.2s;
+}
+
+.service:hover{
+  transform:translateY(-5px);
+  box-shadow:0 15px 35px rgba(13,34,56,.1);
+}
+
+.service-icon{
+  font-size:38px;
+  margin-bottom:15px;
+}
+
+.service h3{
+  color:var(--navy);
+  font-size:21px;
+  margin-bottom:8px;
+}
+
+.service p{
+  color:var(--muted);
+  font-size:15px;
+}
+
+/* FEATURE */
+
+.feature{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:60px;
+  align-items:center;
+}
+
+.feature h2{
+  font-size:42px;
+  line-height:1.1;
+  color:var(--navy);
+  margin-bottom:18px;
+}
+
+.feature-text{
+  color:var(--muted);
+  margin-bottom:25px;
+}
+
+.checks{
+  display:grid;
+  gap:14px;
+}
+
+.check{
+  display:flex;
+  gap:12px;
+  align-items:flex-start;
+}
+
+.check strong{
+  color:var(--blue);
+  font-size:20px;
+}
+
+.info-card{
+  background:var(--navy);
+  color:#fff;
+  padding:40px;
+  border-radius:22px;
+}
+
+.info-card h3{
+  font-size:29px;
+  margin-bottom:12px;
+}
+
+.info-card p{
+  color:#d7e4ef;
+  margin-bottom:22px;
+}
+
+/* ZONES */
+
+.zones{
+  background:var(--light);
+  text-align:center;
+}
+
+.zone-list{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:12px;
+}
+
+.zone{
+  background:#fff;
+  border:1px solid #dce5ed;
+  padding:12px 20px;
+  border-radius:50px;
+  font-weight:800;
+  color:var(--navy);
+}
+
+/* FAQ */
+
+.faq{
+  max-width:850px;
+  margin:auto;
+}
+
+details{
+  background:#fff;
+  border:1px solid #e1e8ee;
+  border-radius:12px;
+  padding:18px 20px;
+  margin-bottom:12px;
+}
+
+summary{
+  cursor:pointer;
+  font-weight:800;
+  color:var(--navy);
+}
+
+details p{
+  color:var(--muted);
+  margin-top:12px;
+}
+
+/* CONTACT */
+
+.contact{
+  background:#fff;
+}
+
+.contact-grid{
+  display:grid;
+  grid-template-columns:.9fr 1.1fr;
+  gap:40px;
+}
+
+.contact-info h2{
+  font-size:42px;
+  line-height:1.1;
+  color:var(--navy);
+  margin-bottom:18px;
+}
+
+.contact-info p{
+  color:var(--muted);
+  margin-bottom:20px;
+}
+
+.contact-link{
+  display:inline-block;
+  margin-bottom:10px;
+  font-weight:800;
+  color:var(--blue);
+}
+
+form{
+  background:var(--light);
+  padding:30px;
+  border-radius:18px;
+}
+
+label{
+  display:block;
+  font-weight:800;
+  font-size:14px;
+  margin-bottom:6px;
+}
+
+input,
+select,
+textarea{
+  width:100%;
+  padding:14px;
+  border:1px solid #d4dee7;
+  border-radius:9px;
+  margin-bottom:15px;
+  background:#fff;
+  font:inherit;
+}
+
+textarea{
+  min-height:130px;
+  resize:vertical;
+}
+
+button{
+  width:100%;
+  border:0;
+  cursor:pointer;
+  font:inherit;
+}
+
+/* WHATSAPP */
+
+.whatsapp{
+  position:fixed;
+  right:18px;
+  bottom:18px;
+  width:60px;
+  height:60px;
+  border-radius:50%;
+  background:var(--green);
+  color:#fff;
+  display:grid;
+  place-items:center;
+  font-size:29px;
+  box-shadow:0 8px 25px rgba(0,0,0,.22);
+  z-index:200;
+}
+
+/* FOOTER */
+
+footer{
+  background:#091a2c;
+  color:#b9c7d5;
+  text-align:center;
+  padding:35px 0;
+  font-size:14px;
+}
+
+/* MOBILE */
+
+@media(max-width:850px){
+
+  .menu{
+    display:none;
   }
-  </script>
 
-  <style>
-    :root{
-      --navy:#10253f;
-      --blue:#1769aa;
-      --light:#f4f7fa;
-      --text:#1c2938;
-      --accent:#f2a900;
-      --white:#fff;
-      --muted:#64748b;
-    }
+  .hero{
+    padding:65px 0;
+  }
 
-    *{
-      box-sizing:border-box;
-      margin:0;
-      padding:0
-    }
+  .hero-grid,
+  .feature,
+  .contact-grid{
+    grid-template-columns:1fr;
+  }
 
-    body{
-      font-family:Arial,Helvetica,sans-serif;
-      color:var(--text);
-      background:#fff;
-      line-height:1.6
-    }
+  .hero-card{
+    display:none;
+  }
 
-    a{
-      text-decoration:none;
-      color:inherit
-    }
+  .service-grid{
+    grid-template-columns:1fr 1fr;
+  }
+}
 
-    .container{
-      width:min(1120px,92%);
-      margin:auto
-    }
+@media(max-width:560px){
 
-    header{
-      background:rgba(255,255,255,.96);
-      position:sticky;
-      top:0;
-      z-index:10;
-      border-bottom:1px solid #e7edf3
-    }
+  section{
+    padding:60px 0;
+  }
 
-    nav{
-      height:74px;
-      display:flex;
-      align-items:center;
-      justify-content:space-between
-    }
+  h1{
+    font-size:45px;
+  }
 
-    .logo{
-      font-size:25px;
-      font-weight:800;
-      color:var(--navy);
-      letter-spacing:-.5px
-    }
+  .service-grid{
+    grid-template-columns:1fr;
+  }
 
-    .logo span{
-      color:var(--blue)
-    }
+  .section-title h2,
+  .feature h2,
+  .contact-info h2{
+    font-size:34px;
+  }
 
-    .menu{
-      display:flex;
-      gap:28px;
-      font-size:15px;
-      font-weight:600
-    }
+  .buttons{
+    flex-direction:column;
+  }
 
-    .menu a:hover{
-      color:var(--blue)
-    }
-
-    .nav-btn{
-      background:var(--blue);
-      color:white;
-      padding:11px 18px;
-      border-radius:9px
-    }
-
-    .hero{
-      background:linear-gradient(120deg,var(--navy),#173e65);
-      color:#fff;
-      padding:92px 0 88px
-    }
-
-    .hero-grid{
-      display:grid;
-      grid-template-columns:1.25fr .75fr;
-      gap:55px;
-      align-items:center
-    }
-
-    .eyebrow{
-      display:inline-block;
-      background:rgba(242,169,0,.16);
-      color:#ffd166;
-      padding:7px 12px;
-      border-radius:999px;
-      font-weight:700;
-      font-size:13px;
-      margin-bottom:18px
-    }
-
-    h1{
-      font-size:clamp(42px,6vw,68px);
-      line-height:1.04;
-      letter-spacing:-2px;
-      margin-bottom:22px
-    }
-
-    .hero p{
-      font-size:19px;
-      color:#dbe7f3;
-      max-width:650px;
-      margin-bottom:30px
-    }
-
-    .buttons{
-      display:flex;
-      gap:13px;
-      flex-wrap:wrap
-    }
-
-    .btn{
-      display:inline-block;
-      padding:14px 22px;
-      border-radius:9px;
-      font-weight:800
-    }
-
-    .btn-primary{
-      background:var(--accent);
-      color:#18212a
-    }
-
-    .btn-secondary{
-      border:1px solid rgba(255,255,255,.35);
-      color:#fff
-    }
-
-    .hero-card{
-      background:#fff;
-      color:var(--text);
-      padding:30px;
-      border-radius:18px;
-      box-shadow:0 20px 50px rgba(0,0,0,.2)
-    }
-
-    .hero-card h3{
-      font-size:23px;
-      color:var(--navy);
-      margin-bottom:12px
-    }
-
-    .hero-card p{
-      font-size:15px;
-      color:var(--muted);
-      margin-bottom:18px
-    }
-
-    .quick{
-      display:grid;
-      gap:10px
-    }
-
-    .quick div{
-      background:var(--light);
-      padding:12px 14px;
-      border-radius:9px;
-      font-weight:700
-    }
-
-    section{
-      padding:78px 0
-    }
-
-    .section-head{
-      text-align:center;
-      max-width:700px;
-      margin:0 auto 42px
-    }
-
-    .section-head h2{
-      font-size:38px;
-      color:var(--navy);
-      letter-spacing:-1px;
-      margin-bottom:10px
-    }
-
-    .section-head p{
-      color:var(--muted)
-    }
-
-    .services{
-      background:var(--light)
-    }
-
-    .grid{
-      display:grid;
-      grid-template-columns:repeat(3,1fr);
-      gap:18px
-    }
-
-    .service{
-      background:#fff;
-      padding:28px;
-      border-radius:15px;
-      border:1px solid #e5ebf0;
-      transition:.2s
-    }
-
-    .service:hover{
-      transform:translateY(-4px);
-      box-shadow:0 12px 30px rgba(16,37,63,.08)
-    }
-
-    .icon{
-      font-size:34px;
-      margin-bottom:15px
-    }
-
-    .service h3{
-      color:var(--navy);
-      margin-bottom:8px;
-      font-size:21px
-    }
-
-    .service p{
-      color:var(--muted);
-      font-size:15px
-    }
-
-    .why{
-      display:grid;
-      grid-template-columns:1fr 1fr;
-      gap:55px;
-      align-items:center
-    }
-
-    .why h2{
-      font-size:40px;
-      color:var(--navy);
-      line-height:1.1;
-      margin-bottom:18px
-    }
-
-    .why p{
-      color:var(--muted);
-      margin-bottom:22px
-    }
-
-    .checks{
-      display:grid;
-      gap:13px
-    }
-
-    .check{
-      display:flex;
-      gap:11px;
-      align-items:flex-start
-    }
-
-    .check b{
-      color:var(--blue)
-    }
-
-    .panel{
-      background:var(--navy);
-      border-radius:20px;
-      padding:38px;
-      color:#fff
-    }
-
-    .panel h3{
-      font-size:27px;
-      margin-bottom:12px
-    }
-
-    .panel p{
-      color:#d8e3ed;
-      margin-bottom:20px
-    }
-
-    .zones{
-      background:var(--light);
-      text-align:center
-    }
-
-    .zone-list{
-      display:flex;
-      justify-content:center;
-      gap:12px;
-      flex-wrap:wrap
-    }
-
-    .zone{
-      background:#fff;
-      border:1px solid #dce5ed;
-      padding:12px 18px;
-      border-radius:999px;
-      font-weight:700;
-      color:var(--navy)
-    }
-
-    .contact-grid{
-      display:grid;
-      grid-template-columns:.9fr 1.1fr;
-      gap:35px
-    }
-
-    .contact-box h2{
-      font-size:39px;
-      color:var(--navy);
-      line-height:1.1;
-      margin-bottom:15px
-    }
-
-    .contact-box p{
-      color:var(--muted);
-      margin-bottom:20px
-    }
-
-    form{
-      background:var(--light);
-      padding:28px;
-      border-radius:16px
-    }
-
-    label{
-      display:block;
-      font-weight:700;
-      font-size:14px;
-      margin-bottom:6px
-    }
-
-    input,textarea,select{
-      width:100%;
-      padding:13px;
-      border:1px solid #d5dee7;
-      border-radius:8px;
-      margin-bottom:14px;
-      font:inherit;
-      background:#fff
-    }
-
-    textarea{
-      min-height:120px;
-      resize:vertical
-    }
-
-    button{
-      border:0;
-      cursor:pointer;
-      width:100%;
-      font:inherit
-    }
-
-    footer{
-      background:#0b1b2e;
-      color:#b9c7d5;
-      padding:32px 0;
-      text-align:center;
-      font-size:14px
-    }
-
-    .floating{
-      position:fixed;
-      right:18px;
-      bottom:18px;
-      background:#25d366;
-      color:white;
-      width:58px;
-      height:58px;
-      border-radius:50%;
-      display:grid;
-      place-items:center;
-      font-size:27px;
-      box-shadow:0 8px 25px rgba(0,0,0,.2);
-      z-index:20
-    }
-
-    @media(max-width:800px){
-      .menu{display:none}
-      .hero-grid,.why,.contact-grid{
-        grid-template-columns:1fr
-      }
-      .grid{
-        grid-template-columns:1fr 1fr
-      }
-      .hero{
-        padding:65px 0
-      }
-      .hero-card{
-        display:none
-      }
-    }
-
-    @media(max-width:560px){
-      .grid{
-        grid-template-columns:1fr
-      }
-      section{
-        padding:58px 0
-      }
-      h1{
-        font-size:45px
-      }
-    }
-  </style>
+  .buttons .btn{
+    text-align:center;
+  }
+}
+</style>
 </head>
 
 <body>
@@ -460,204 +525,386 @@
 <header>
   <div class="container">
     <nav>
-      <div class="logo">HOGAR <span>BOOST</span></div>
+
+      <div class="logo">
+        HOGAR <span>BOOST</span>
+      </div>
 
       <div class="menu">
         <a href="#servicios">Servicios</a>
         <a href="#nosotros">Nosotros</a>
         <a href="#zonas">Zonas</a>
-        <a href="#contacto">Contacto</a>
-        <a class="nav-btn" href="#contacto">Presupuesto</a>
+        <a href="#faq">Preguntas</a>
+        <a href="#contacto" class="nav-button">Presupuesto</a>
       </div>
+
     </nav>
   </div>
 </header>
 
 <main>
 
+<!-- HERO -->
+
 <section class="hero">
+
   <div class="container hero-grid">
 
     <div>
-      <span class="eyebrow">MADRID · TOLEDO</span>
 
-      <h1>Servicios para tu hogar en Madrid y Toledo.</h1>
+      <span class="badge">
+        MADRID · TOLEDO · SERVICIOS PARA TU HOGAR
+      </span>
 
-      <p>
-        Fontanería, electricidad, calefacción, calderas, climatización y reparaciones del hogar.
-        Un solo equipo para ayudarte con el mantenimiento de tu vivienda.
+      <h1>
+        Todo lo que tu hogar necesita, en un solo lugar.
+      </h1>
+
+      <p class="hero-text">
+        Fontanería, electricidad, calefacción, calderas, climatización,
+        mantenimiento y reparaciones para tu vivienda.
       </p>
 
       <div class="buttons">
-        <a class="btn btn-primary" href="#contacto">Solicitar presupuesto</a>
-        <a class="btn btn-secondary" href="#servicios">Ver servicios</a>
+
+        <a class="btn btn-primary" href="#contacto">
+          Solicitar presupuesto
+        </a>
+
+        <a class="btn btn-outline" href="#servicios">
+          Ver nuestros servicios
+        </a>
+
       </div>
+
     </div>
 
     <div class="hero-card">
-      <h3>Hogar Boost</h3>
+
+      <h2>Hogar Boost</h2>
 
       <p>
-        Servicios integrales para resolver las necesidades de mantenimiento y reparación de tu hogar.
+        Servicios integrales para ayudarte con el mantenimiento,
+        reparación y mejora de tu hogar.
       </p>
 
       <div class="quick">
+
         <div>🔥 Calderas y calefacción</div>
         <div>⚡ Electricidad</div>
         <div>💧 Fontanería</div>
         <div>❄️ Climatización</div>
         <div>🔧 Reparaciones</div>
+
       </div>
+
     </div>
 
   </div>
+
 </section>
+
+<!-- SERVICIOS -->
 
 <section id="servicios" class="services">
+
   <div class="container">
 
-    <div class="section-head">
-      <h2>Servicios para tu hogar</h2>
+    <div class="section-title">
+
+      <h2>
+        Nuestros servicios
+      </h2>
+
       <p>
-        Soluciones de mantenimiento y reparación para viviendas en Madrid y Toledo.
+        Soluciones para el mantenimiento y reparación de tu vivienda.
       </p>
-    </div>
-
-    <div class="grid">
-
-      <article class="service">
-        <div class="icon">🔥</div>
-        <h3>Calderas y calefacción</h3>
-        <p>
-          Revisión, mantenimiento y reparación de sistemas de calefacción y calderas.
-        </p>
-      </article>
-
-      <article class="service">
-        <div class="icon">⚡</div>
-        <h3>Electricidad</h3>
-        <p>
-          Instalaciones, averías, enchufes, iluminación y trabajos eléctricos para viviendas.
-        </p>
-      </article>
-
-      <article class="service">
-        <div class="icon">💧</div>
-        <h3>Fontanería</h3>
-        <p>
-          Reparación de fugas, grifos, sanitarios, tuberías y diferentes problemas de fontanería.
-        </p>
-      </article>
-
-      <article class="service">
-        <div class="icon">❄️</div>
-        <h3>Climatización</h3>
-        <p>
-          Mantenimiento y soluciones para aire acondicionado y sistemas de climatización.
-        </p>
-      </article>
-
-      <article class="service">
-        <div class="icon">🛠️</div>
-        <h3>Reparaciones</h3>
-        <p>
-          Reparaciones y trabajos de mantenimiento para conservar tu vivienda en buen estado.
-        </p>
-      </article>
-
-      <article class="service">
-        <div class="icon">🏠</div>
-        <h3>Servicios integrales</h3>
-        <p>
-          Una solución coordinada para diferentes necesidades de mantenimiento de tu hogar.
-        </p>
-      </article>
 
     </div>
+
+    <div class="service-grid">
+
+      <article class="service">
+
+        <div class="service-icon">🔥</div>
+
+        <h3>
+          Calderas y calefacción
+        </h3>
+
+        <p>
+          Mantenimiento, revisión y reparación de sistemas de calefacción
+          y calderas.
+        </p>
+
+      </article>
+
+      <article class="service">
+
+        <div class="service-icon">⚡</div>
+
+        <h3>
+          Electricidad
+        </h3>
+
+        <p>
+          Averías, enchufes, iluminación, instalaciones y diferentes
+          trabajos eléctricos.
+        </p>
+
+      </article>
+
+      <article class="service">
+
+        <div class="service-icon">💧</div>
+
+        <h3>
+          Fontanería
+        </h3>
+
+        <p>
+          Fugas, grifos, sanitarios, tuberías y reparaciones
+          de fontanería.
+        </p>
+
+      </article>
+
+      <article class="service">
+
+        <div class="service-icon">❄️</div>
+
+        <h3>
+          Climatización
+        </h3>
+
+        <p>
+          Mantenimiento y soluciones relacionadas con aire acondicionado
+          y climatización.
+        </p>
+
+      </article>
+
+      <article class="service">
+
+        <div class="service-icon">🛠️</div>
+
+        <h3>
+          Reparaciones
+        </h3>
+
+        <p>
+          Diferentes trabajos de reparación y mantenimiento
+          para tu vivienda.
+        </p>
+
+      </article>
+
+      <article class="service">
+
+        <div class="service-icon">🏠</div>
+
+        <h3>
+          Mantenimiento del hogar
+        </h3>
+
+        <p>
+          Una solución coordinada para diferentes necesidades
+          de mantenimiento de tu hogar.
+        </p>
+
+      </article>
+
+    </div>
+
   </div>
+
 </section>
 
+<!-- NOSOTROS -->
+
 <section id="nosotros">
-  <div class="container why">
+
+  <div class="container feature">
 
     <div>
-      <h2>Tu hogar en buenas manos.</h2>
 
-      <p>
-        En Hogar Boost queremos facilitar el mantenimiento de tu vivienda con un servicio cercano,
-        profesional y transparente.
+      <h2>
+        Tu hogar en buenas manos.
+      </h2>
+
+      <p class="feature-text">
+        En Hogar Boost queremos facilitarte el mantenimiento de tu vivienda
+        ofreciendo diferentes servicios desde un único contacto.
       </p>
 
       <div class="checks">
+
         <div class="check">
-          <b>✓</b>
+          <strong>✓</strong>
           <span>Atención personalizada</span>
         </div>
 
         <div class="check">
-          <b>✓</b>
+          <strong>✓</strong>
           <span>Presupuestos claros antes de realizar el trabajo</span>
         </div>
 
         <div class="check">
-          <b>✓</b>
-          <span>Un único contacto para diferentes servicios</span>
+          <strong>✓</strong>
+          <span>Diferentes servicios para tu vivienda</span>
         </div>
 
         <div class="check">
-          <b>✓</b>
+          <strong>✓</strong>
           <span>Servicio en Madrid y Toledo</span>
         </div>
+
       </div>
+
     </div>
 
-    <div class="panel">
-      <h3>¿Tienes una avería o necesitas un trabajo?</h3>
+    <div class="info-card">
+
+      <h3>
+        ¿Tienes una avería?
+      </h3>
 
       <p>
-        Cuéntanos qué necesitas y estudiaremos la mejor solución para tu hogar.
+        Cuéntanos qué necesitas y contactaremos contigo para conocer
+        el trabajo y estudiar la mejor solución.
       </p>
 
       <a class="btn btn-primary" href="#contacto">
         Pedir presupuesto
       </a>
+
     </div>
 
   </div>
+
 </section>
 
+<!-- ZONAS -->
+
 <section id="zonas" class="zones">
+
   <div class="container">
 
-    <div class="section-head">
-      <h2>Trabajamos en Madrid y Toledo</h2>
+    <div class="section-title">
+
+      <h2>
+        Zonas de servicio
+      </h2>
 
       <p>
-        Hogar Boost ofrece servicios integrales para viviendas y hogares en Madrid,
-        Comunidad de Madrid y provincia de Toledo.
+        Trabajamos en Madrid, Comunidad de Madrid, Toledo
+        y provincia de Toledo.
       </p>
+
     </div>
 
     <div class="zone-list">
+
       <span class="zone">Madrid</span>
       <span class="zone">Comunidad de Madrid</span>
       <span class="zone">Toledo</span>
       <span class="zone">Provincia de Toledo</span>
+
     </div>
 
   </div>
+
 </section>
 
-<section id="contacto">
-  <div class="container contact-grid">
+<!-- FAQ -->
 
-    <div class="contact-box">
+<section id="faq">
 
-      <h2>Cuéntanos qué necesitas.</h2>
+  <div class="container">
+
+    <div class="section-title">
+
+      <h2>
+        Preguntas frecuentes
+      </h2>
 
       <p>
-        Déjanos tus datos y una breve descripción del trabajo.
-        Nos pondremos en contacto contigo para conocer tus necesidades.
+        Algunas preguntas habituales sobre nuestros servicios.
+      </p>
+
+    </div>
+
+    <div class="faq">
+
+      <details>
+        <summary>
+          ¿Qué servicios ofrece Hogar Boost?
+        </summary>
+
+        <p>
+          Ofrecemos servicios de fontanería, electricidad, calefacción,
+          calderas, climatización, mantenimiento y reparaciones del hogar.
+        </p>
+
+      </details>
+
+      <details>
+        <summary>
+          ¿En qué zonas trabajáis?
+        </summary>
+
+        <p>
+          Prestamos servicio en Madrid, Comunidad de Madrid,
+          Toledo y provincia de Toledo.
+        </p>
+
+      </details>
+
+      <details>
+        <summary>
+          ¿Puedo solicitar un presupuesto?
+        </summary>
+
+        <p>
+          Sí. Puedes utilizar el formulario de contacto o escribirnos
+          directamente por WhatsApp.
+        </p>
+
+      </details>
+
+      <details>
+        <summary>
+          ¿Cómo puedo contactar con Hogar Boost?
+        </summary>
+
+        <p>
+          Puedes contactar con nosotros por teléfono, WhatsApp
+          o mediante el formulario de presupuesto de esta página.
+        </p>
+
+      </details>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- CONTACTO -->
+
+<section id="contacto" class="contact">
+
+  <div class="container contact-grid">
+
+    <div class="contact-info">
+
+      <h2>
+        Cuéntanos qué necesitas.
+      </h2>
+
+      <p>
+        Rellena el formulario y explícanos brevemente qué trabajo
+        necesitas realizar en tu hogar.
       </p>
 
       <p>
@@ -666,66 +913,150 @@
         Madrid · Toledo
       </p>
 
-      <p>
-        <strong>Teléfono:</strong>
-        <a href="tel:+34654630623">654 63 06 23</a>
-      </p>
+      <a class="contact-link" href="tel:+34654630623">
+        📞 654 63 06 23
+      </a>
+
+      <br>
+
+      <a class="contact-link"
+         href="https://wa.me/34654630623?text=Hola%20Hogar%20Boost%2C%20necesito%20un%20presupuesto."
+         target="_blank"
+         rel="noopener">
+        💬 Contactar por WhatsApp
+      </a>
 
     </div>
 
-    <form action="https://formsubmit.co/serviciosintegralesdelhogar82@gmail.com" method="POST">
+    <form
+      action="https://formsubmit.co/serviciosintegralesdelhogar82@gmail.com"
+      method="POST">
 
-      <input type="hidden" name="_subject" value="Nueva solicitud de presupuesto - Hogar Boost">
-      <input type="hidden" name="_captcha" value="false">
+      <input
+        type="hidden"
+        name="_subject"
+        value="Nueva solicitud de presupuesto - Hogar Boost">
 
-      <label for="nombre">Nombre</label>
-      <input id="nombre" required type="text" name="nombre" placeholder="Tu nombre">
+      <input
+        type="hidden"
+        name="_captcha"
+        value="false">
 
-      <label for="telefono">Teléfono</label>
-      <input id="telefono" required type="tel" name="telefono" placeholder="Tu teléfono">
+      <label for="nombre">
+        Nombre
+      </label>
 
-      <label for="servicio">Servicio</label>
+      <input
+        id="nombre"
+        required
+        type="text"
+        name="nombre"
+        placeholder="Tu nombre">
 
-      <select id="servicio" name="servicio">
+      <label for="telefono">
+        Teléfono
+      </label>
+
+      <input
+        id="telefono"
+        required
+        type="tel"
+        name="telefono"
+        placeholder="Tu teléfono">
+
+      <label for="servicio">
+        Servicio
+      </label>
+
+      <select
+        id="servicio"
+        name="servicio">
+
         <option>Calderas y calefacción</option>
         <option>Electricidad</option>
         <option>Fontanería</option>
         <option>Climatización</option>
         <option>Reparaciones</option>
+        <option>Mantenimiento del hogar</option>
         <option>Otro</option>
+
       </select>
 
-      <label for="mensaje">¿Qué necesitas?</label>
+      <label for="mensaje">
+        ¿Qué necesitas?
+      </label>
 
       <textarea
         id="mensaje"
         name="mensaje"
-        placeholder="Cuéntanos brevemente el problema o trabajo..."
-      ></textarea>
+        placeholder="Cuéntanos brevemente el problema o trabajo..."></textarea>
 
-      <button class="btn btn-primary" type="submit">
+      <button
+        class="btn btn-primary"
+        type="submit">
+
         Solicitar presupuesto
+
       </button>
 
     </form>
 
   </div>
+
 </section>
 
 </main>
 
+<!-- WHATSAPP -->
+
 <a
-  class="floating"
+  class="whatsapp"
   href="https://wa.me/34654630623?text=Hola%20Hogar%20Boost%2C%20necesito%20un%20presupuesto."
   target="_blank"
   rel="noopener"
   aria-label="Contactar por WhatsApp">
+
   ☏
+
 </a>
 
 <footer>
+
   © 2026 Hogar Boost · Servicios integrales del hogar · Madrid y Toledo
+
 </footer>
+
+<!-- DATOS PARA GOOGLE -->
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"LocalBusiness",
+  "name":"Hogar Boost",
+  "url":"https://hogarboost.es/",
+  "telephone":"+34654630623",
+  "description":"Servicios integrales del hogar en Madrid y Toledo: fontanería, electricidad, calefacción, calderas, climatización, mantenimiento y reparaciones.",
+  "areaServed":[
+    {
+      "@type":"AdministrativeArea",
+      "name":"Comunidad de Madrid"
+    },
+    {
+      "@type":"AdministrativeArea",
+      "name":"Provincia de Toledo"
+    }
+  ],
+  "serviceType":[
+    "Fontanería",
+    "Electricidad",
+    "Calefacción",
+    "Calderas",
+    "Climatización",
+    "Reparaciones del hogar",
+    "Mantenimiento del hogar"
+  ]
+}
+</script>
 
 </body>
 </html>
