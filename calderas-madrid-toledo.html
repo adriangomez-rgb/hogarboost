@@ -1,0 +1,544 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Calderas en Madrid y Toledo | Reparación y Mantenimiento | Hogar Boost</title>
+<meta name="description" content="Hogar Boost ofrece servicios de calderas en Madrid y Toledo. Reparación, mantenimiento y revisión de calderas y sistemas de calefacción. Contacta por teléfono o WhatsApp y solicita presupuesto.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://hogarboost.es/calderas-madrid-toledo.html">
+<link rel="icon" type="image/jpeg" href="favicon.jpg">
+<link rel="shortcut icon" type="image/jpeg" href="favicon.jpg">
+<style>
+:root{
+  --navy:#0d2238;
+  --blue:#1769aa;
+  --light:#f4f7fa;
+  --text:#182635;
+  --muted:#64748b;
+  --yellow:#f2a900;
+  --green:#25d366;
+}
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+html{
+  scroll-behavior:smooth;
+}
+body{
+  font-family:Arial,Helvetica,sans-serif;
+  color:var(--text);
+  line-height:1.6;
+  background:#fff;
+}
+a{
+  text-decoration:none;
+  color:inherit;
+}
+.container{
+  width:min(1100px,92%);
+  margin:auto;
+}
+/* HEADER */
+header{
+  background:#fff;
+  border-bottom:1px solid #e5ebf0;
+}
+nav{
+  min-height:72px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+}
+.logo{
+  font-size:25px;
+  font-weight:900;
+  color:var(--navy);
+}
+.logo span{
+  color:var(--blue);
+}
+.back{
+  color:var(--blue);
+  font-weight:800;
+}
+/* HERO */
+.hero{
+  background:
+    radial-gradient(circle at 85% 20%,rgba(37,133,209,.25),transparent 30%),
+    linear-gradient(120deg,#0b2035,#17466f);
+  color:#fff;
+  padding:80px 0;
+}
+.hero h1{
+  font-size:clamp(38px,6vw,62px);
+  line-height:1.05;
+  letter-spacing:-2px;
+  margin-bottom:22px;
+}
+.hero p{
+  max-width:800px;
+  font-size:19px;
+  color:#dce8f2;
+  margin-bottom:28px;
+}
+.btn{
+  display:inline-block;
+  padding:14px 22px;
+  border-radius:10px;
+  font-weight:800;
+}
+.btn-primary{
+  background:var(--yellow);
+  color:#18212a;
+}
+.btn-whatsapp{
+  background:var(--green);
+  color:#fff;
+  margin-left:8px;
+}
+/* SECCIONES */
+section{
+  padding:75px 0;
+}
+.section-title{
+  text-align:center;
+  max-width:800px;
+  margin:0 auto 40px;
+}
+.section-title h2{
+  font-size:38px;
+  color:var(--navy);
+  margin-bottom:12px;
+}
+.section-title p{
+  color:var(--muted);
+}
+/* SERVICIOS */
+.services{
+  background:var(--light);
+}
+.grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+}
+.card{
+  background:#fff;
+  border:1px solid #e2e9ef;
+  border-radius:17px;
+  padding:28px;
+}
+.card-icon{
+  font-size:38px;
+  margin-bottom:12px;
+}
+.card h3{
+  color:var(--navy);
+  margin-bottom:8px;
+  font-size:21px;
+}
+.card p{
+  color:var(--muted);
+}
+/* PROBLEMAS */
+.problems{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:50px;
+  align-items:center;
+}
+.problems h2{
+  color:var(--navy);
+  font-size:38px;
+  line-height:1.1;
+  margin-bottom:18px;
+}
+.problems p{
+  color:var(--muted);
+  margin-bottom:20px;
+}
+.list{
+  display:grid;
+  gap:12px;
+}
+.list div{
+  padding:14px 16px;
+  background:var(--light);
+  border-radius:10px;
+  font-weight:700;
+}
+/* ZONAS */
+.zone{
+  background:var(--light);
+  text-align:center;
+}
+.zone-box{
+  background:#fff;
+  border:1px solid #dce5ed;
+  border-radius:18px;
+  padding:30px;
+  max-width:900px;
+  margin:auto;
+}
+.zone-box p{
+  color:var(--muted);
+  font-size:17px;
+}
+/* FAQ */
+.faq{
+  max-width:850px;
+  margin:auto;
+}
+details{
+  border:1px solid #e1e8ee;
+  border-radius:12px;
+  padding:18px 20px;
+  margin-bottom:12px;
+}
+summary{
+  cursor:pointer;
+  font-weight:800;
+  color:var(--navy);
+}
+details p{
+  color:var(--muted);
+  margin-top:12px;
+}
+/* CONTACTO */
+.contact{
+  background:var(--navy);
+  color:#fff;
+  text-align:center;
+}
+.contact h2{
+  font-size:40px;
+  margin-bottom:15px;
+}
+.contact p{
+  color:#d7e4ef;
+  max-width:750px;
+  margin:0 auto 25px;
+}
+.contact-buttons{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:10px;
+}
+/* WHATSAPP */
+.whatsapp{
+  position:fixed;
+  right:18px;
+  bottom:18px;
+  width:60px;
+  height:60px;
+  border-radius:50%;
+  background:var(--green);
+  color:#fff;
+  display:grid;
+  place-items:center;
+  font-size:29px;
+  box-shadow:0 8px 25px rgba(0,0,0,.22);
+  z-index:200;
+}
+/* FOOTER */
+footer{
+  background:#091a2c;
+  color:#b9c7d5;
+  text-align:center;
+  padding:30px 0;
+  font-size:14px;
+}
+/* MOVIL */
+@media(max-width:750px){
+  .grid{
+    grid-template-columns:1fr;
+  }
+  .problems{
+    grid-template-columns:1fr;
+  }
+  .btn-whatsapp{
+    margin-left:0;
+    margin-top:10px;
+  }
+}
+</style>
+</head>
+<body>
+<header>
+<div class="container">
+<nav>
+<div class="logo">
+HOGAR <span>BOOST</span>
+</div>
+<a class="back" href="https://hogarboost.es/">
+← Volver a Hogar Boost
+</a>
+</nav>
+</div>
+</header>
+<main>
+<!-- HERO -->
+<section class="hero">
+<div class="container">
+<h1>
+Calderas en Madrid y Toledo
+</h1>
+<p>
+Servicios de reparación, mantenimiento y revisión de calderas
+y sistemas de calefacción para viviendas en Madrid y Toledo.
+</p>
+<a class="btn btn-primary" href="tel:+34654630623">
+📞 654 63 06 23
+</a>
+<a
+class="btn btn-whatsapp"
+href="https://wa.me/34654630623?text=Hola%20Hogar%20Boost%2C%20necesito%20ayuda%20con%20mi%20caldera."
+target="_blank"
+rel="noopener">
+💬 WhatsApp
+</a>
+</div>
+</section>
+<!-- SERVICIOS -->
+<section class="services">
+<div class="container">
+<div class="section-title">
+<h2>
+Servicios para calderas
+</h2>
+<p>
+Soluciones para diferentes problemas y necesidades relacionadas
+con calderas y calefacción doméstica.
+</p>
+</div>
+<div class="grid">
+<article class="card">
+<div class="card-icon">🔥</div>
+<h3>
+Reparación de calderas
+</h3>
+<p>
+Atención ante diferentes problemas y averías relacionados
+con calderas y sistemas de calefacción.
+</p>
+</article>
+<article class="card">
+<div class="card-icon">🔧</div>
+<h3>
+Mantenimiento de calderas
+</h3>
+<p>
+Revisión y mantenimiento para ayudar a mantener la caldera
+y el sistema de calefacción en buenas condiciones.
+</p>
+</article>
+<article class="card">
+<div class="card-icon">⚠️</div>
+<h3>
+Caldera con avería
+</h3>
+<p>
+Si la caldera presenta un problema o deja de funcionar,
+puedes contactar con Hogar Boost para estudiar el caso.
+</p>
+</article>
+<article class="card">
+<div class="card-icon">💧</div>
+<h3>
+Problemas de presión
+</h3>
+<p>
+Comprobación de problemas habituales relacionados con la
+presión del circuito de calefacción.
+</p>
+</article>
+<article class="card">
+<div class="card-icon">🌡️</div>
+<h3>
+Caldera y radiadores
+</h3>
+<p>
+Soluciones relacionadas con el funcionamiento del sistema
+de calefacción y sus radiadores.
+</p>
+</article>
+<article class="card">
+<div class="card-icon">🏠</div>
+<h3>
+Calefacción doméstica
+</h3>
+<p>
+Servicios relacionados con calderas y sistemas de calefacción
+para viviendas particulares.
+</p>
+</article>
+</div>
+</div>
+</section>
+<!-- PROBLEMAS -->
+<section>
+<div class="container problems">
+<div>
+<h2>
+¿Tu caldera está dando problemas?
+</h2>
+<p>
+Si tu caldera no funciona correctamente, pierde presión,
+no proporciona calefacción o presenta algún problema,
+contacta con Hogar Boost para estudiar tu caso.
+</p>
+<a class="btn btn-primary" href="#contacto">
+Solicitar presupuesto
+</a>
+</div>
+<div class="list">
+<div>🔥 La caldera no funciona</div>
+<div>⚠️ Aparece una avería</div>
+<div>💧 La caldera pierde presión</div>
+<div>🌡️ Los radiadores no calientan</div>
+<div>🔧 Necesita mantenimiento</div>
+<div>🏠 Preparación para la temporada de frío</div>
+</div>
+</div>
+</section>
+<!-- ZONA -->
+<section class="zone">
+<div class="container">
+<div class="section-title">
+<h2>
+Calderas en Madrid y Toledo
+</h2>
+<p>
+Prestamos servicios relacionados con calderas y calefacción
+en diferentes municipios de Madrid y Toledo.
+</p>
+</div>
+<div class="zone-box">
+<p>
+Si necesitas reparar, revisar o realizar mantenimiento de tu
+caldera, contacta con Hogar Boost y explícanos qué problema
+tienes. Estudiaremos el trabajo que necesitas y la mejor
+solución para tu vivienda.
+</p>
+</div>
+</div>
+</section>
+<!-- FAQ -->
+<section>
+<div class="container">
+<div class="section-title">
+<h2>
+Preguntas frecuentes sobre calderas
+</h2>
+</div>
+<div class="faq">
+<details>
+<summary>
+¿Qué problemas de calderas atendéis?
+</summary>
+<p>
+Atendemos diferentes problemas relacionados con calderas,
+calefacción y radiadores, dependiendo del tipo de instalación
+y del trabajo necesario.
+</p>
+</details>
+<details>
+<summary>
+¿Trabajáis en Madrid y Toledo?
+</summary>
+<p>
+Sí. Hogar Boost presta servicios en diferentes municipios
+de la Comunidad de Madrid y de la provincia de Toledo.
+</p>
+</details>
+<details>
+<summary>
+¿Puedo pedir presupuesto?
+</summary>
+<p>
+Sí. Puedes contactar por teléfono o WhatsApp y explicarnos
+qué problema presenta tu caldera.
+</p>
+</details>
+<details>
+<summary>
+¿Qué hago si mi caldera pierde presión?
+</summary>
+<p>
+La pérdida de presión puede tener diferentes causas.
+Si el problema persiste, puedes contactar con Hogar Boost
+para estudiar la instalación y determinar el trabajo necesario.
+</p>
+</details>
+</div>
+</div>
+</section>
+<!-- CONTACTO -->
+<section id="contacto" class="contact">
+<div class="container">
+<h2>
+¿Necesitas ayuda con tu caldera?
+</h2>
+<p>
+Contacta con Hogar Boost y cuéntanos qué necesitas.
+Trabajamos en Madrid y Toledo.
+</p>
+<div class="contact-buttons">
+<a class="btn btn-primary" href="tel:+34654630623">
+📞 654 63 06 23
+</a>
+<a
+class="btn btn-whatsapp"
+href="https://wa.me/34654630623?text=Hola%20Hogar%20Boost%2C%20necesito%20un%20presupuesto%20para%20mi%20caldera."
+target="_blank"
+rel="noopener">
+💬 Pedir presupuesto por WhatsApp
+</a>
+</div>
+</div>
+</section>
+</main>
+<!-- WHATSAPP -->
+<a
+class="whatsapp"
+href="https://wa.me/34654630623?text=Hola%20Hogar%20Boost%2C%20necesito%20ayuda%20con%20mi%20caldera."
+target="_blank"
+rel="noopener"
+aria-label="Contactar por WhatsApp">
+☏
+</a>
+<footer>
+© 2026 Hogar Boost · Calderas en Madrid y Toledo · Servicios integrales del hogar
+</footer>
+<!-- DATOS PARA GOOGLE -->
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Service",
+  "name":"Servicios de calderas en Madrid y Toledo",
+  "provider":{
+    "@type":"LocalBusiness",
+    "name":"Hogar Boost",
+    "url":"https://hogarboost.es/",
+    "telephone":"+34654630623"
+  },
+  "areaServed":[
+    {
+      "@type":"AdministrativeArea",
+      "name":"Comunidad de Madrid"
+    },
+    {
+      "@type":"AdministrativeArea",
+      "name":"Provincia de Toledo"
+    }
+  ],
+  "serviceType":"Reparación y mantenimiento de calderas"
+}
+</script>
+</body>
+</html>
