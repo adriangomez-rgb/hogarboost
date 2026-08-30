@@ -3,14 +3,13 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-
 <title>Hogar Boost | Servicios integrales del hogar en Madrid y Toledo</title>
-
 <meta name="description" content="Hogar Boost ofrece servicios integrales del hogar en todos los municipios de Madrid y Toledo. Fontanería, electricidad, calefacción, calderas, climatización, mantenimiento y reparaciones. Solicita presupuesto.">
-
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://hogarboost.es/">
-
+<!-- FAVICON HOGAR BOOST -->
+<link rel="icon" type="image/jpeg" href="favicon.jpg">
+<link rel="shortcut icon" type="image/jpeg" href="favicon.jpg">
 <style>
 :root{
   --navy:#0d2238;
@@ -22,36 +21,29 @@
   --green:#25d366;
   --white:#ffffff;
 }
-
 *{
   box-sizing:border-box;
   margin:0;
   padding:0;
 }
-
 html{
   scroll-behavior:smooth;
 }
-
 body{
   font-family:Arial,Helvetica,sans-serif;
   color:var(--text);
   line-height:1.6;
   background:#fff;
 }
-
 a{
   text-decoration:none;
   color:inherit;
 }
-
 .container{
   width:min(1120px,92%);
   margin:auto;
 }
-
 /* HEADER */
-
 header{
   position:sticky;
   top:0;
@@ -60,7 +52,6 @@ header{
   border-bottom:1px solid #e5ebf0;
   backdrop-filter:blur(8px);
 }
-
 nav{
   min-height:72px;
   display:flex;
@@ -68,17 +59,14 @@ nav{
   justify-content:space-between;
   gap:20px;
 }
-
 .logo{
   font-size:25px;
   font-weight:900;
   color:var(--navy);
 }
-
 .logo span{
   color:var(--blue);
 }
-
 .menu{
   display:flex;
   align-items:center;
@@ -86,20 +74,16 @@ nav{
   font-size:15px;
   font-weight:700;
 }
-
 .menu a:hover{
   color:var(--blue);
 }
-
 .nav-button{
   background:var(--blue);
   color:#fff!important;
   padding:11px 17px;
   border-radius:9px;
 }
-
 /* HERO */
-
 .hero{
   background:
     radial-gradient(circle at 85% 20%,rgba(37,133,209,.25),transparent 30%),
@@ -107,14 +91,12 @@ nav{
   color:#fff;
   padding:90px 0;
 }
-
 .hero-grid{
   display:grid;
   grid-template-columns:1.2fr .8fr;
   gap:55px;
   align-items:center;
 }
-
 .badge{
   display:inline-block;
   background:rgba(242,169,0,.15);
@@ -125,44 +107,37 @@ nav{
   font-weight:800;
   margin-bottom:20px;
 }
-
 h1{
   font-size:clamp(42px,6vw,68px);
   line-height:1.03;
   letter-spacing:-2px;
   margin-bottom:22px;
 }
-
 .hero-text{
   font-size:19px;
   color:#dce8f2;
   max-width:680px;
   margin-bottom:30px;
 }
-
 .buttons{
   display:flex;
   flex-wrap:wrap;
   gap:12px;
 }
-
 .btn{
   display:inline-block;
   padding:14px 22px;
   border-radius:10px;
   font-weight:800;
 }
-
 .btn-primary{
   background:var(--yellow);
   color:#18212a;
 }
-
 .btn-outline{
   border:1px solid rgba(255,255,255,.4);
   color:#fff;
 }
-
 .hero-card{
   background:#fff;
   color:var(--text);
@@ -170,64 +145,51 @@ h1{
   border-radius:20px;
   box-shadow:0 25px 60px rgba(0,0,0,.25);
 }
-
 .hero-card h2{
   color:var(--navy);
   margin-bottom:8px;
 }
-
 .hero-card p{
   color:var(--muted);
   margin-bottom:20px;
 }
-
 .quick{
   display:grid;
   gap:10px;
 }
-
 .quick div{
   background:var(--light);
   padding:12px 14px;
   border-radius:9px;
   font-weight:700;
 }
-
 /* SECCIONES */
-
 section{
   padding:80px 0;
 }
-
 .section-title{
   text-align:center;
   max-width:750px;
   margin:0 auto 45px;
 }
-
 .section-title h2{
   font-size:40px;
   line-height:1.1;
   color:var(--navy);
   margin-bottom:12px;
 }
-
 .section-title p{
   color:var(--muted);
 }
-
 /* SERVICIOS */
-
 .services{
   background:var(--light);
 }
-
 .service-grid{
   display:grid;
   grid-template-columns:repeat(3,1fr);
   gap:20px;
 }
-
 .service{
   background:#fff;
   border:1px solid #e2e9ef;
@@ -235,96 +197,78 @@ section{
   padding:30px;
   transition:.2s;
 }
-
 .service:hover{
   transform:translateY(-5px);
   box-shadow:0 15px 35px rgba(13,34,56,.1);
 }
-
 .service-icon{
   font-size:38px;
   margin-bottom:15px;
 }
-
 .service h3{
   color:var(--navy);
   font-size:21px;
   margin-bottom:8px;
 }
-
 .service p{
   color:var(--muted);
   font-size:15px;
 }
-
 /* NOSOTROS */
-
 .feature{
   display:grid;
   grid-template-columns:1fr 1fr;
   gap:60px;
   align-items:center;
 }
-
 .feature h2{
   font-size:42px;
   line-height:1.1;
   color:var(--navy);
   margin-bottom:18px;
 }
-
 .feature-text{
   color:var(--muted);
   margin-bottom:25px;
 }
-
 .checks{
   display:grid;
   gap:14px;
 }
-
 .check{
   display:flex;
   gap:12px;
   align-items:flex-start;
 }
-
 .check strong{
   color:var(--blue);
   font-size:20px;
 }
-
 .info-card{
   background:var(--navy);
   color:#fff;
   padding:40px;
   border-radius:22px;
 }
-
 .info-card h3{
   font-size:29px;
   margin-bottom:12px;
 }
-
 .info-card p{
   color:#d7e4ef;
   margin-bottom:22px;
 }
-
 /* ZONAS */
-
 .zones{
   background:var(--light);
   text-align:center;
 }
-
 .zone-list{
   display:flex;
   justify-content:center;
   flex-wrap:wrap;
   gap:15px;
 }
-
 .zone{
   background:#fff;
   border:1px solid #dce5ed;
@@ -333,14 +277,11 @@ section{
   font-weight:800;
   color:var(--navy);
 }
-
 /* FAQ */
-
 .faq{
   max-width:850px;
   margin:auto;
 }
-
 details{
   background:#fff;
   border:1px solid #e1e8ee;
@@ -348,62 +289,51 @@ details{
   padding:18px 20px;
   margin-bottom:12px;
 }
-
 summary{
   cursor:pointer;
   font-weight:800;
   color:var(--navy);
 }
-
 details p{
   color:var(--muted);
   margin-top:12px;
 }
-
 /* CONTACTO */
-
 .contact{
   background:#fff;
 }
-
 .contact-grid{
   display:grid;
   grid-template-columns:.9fr 1.1fr;
   gap:40px;
 }
-
 .contact-info h2{
   font-size:42px;
   line-height:1.1;
   color:var(--navy);
   margin-bottom:18px;
 }
-
 .contact-info p{
   color:var(--muted);
   margin-bottom:20px;
 }
-
 .contact-link{
   display:inline-block;
   margin-bottom:10px;
   font-weight:800;
   color:var(--blue);
 }
-
 form{
   background:var(--light);
   padding:30px;
   border-radius:18px;
 }
-
 label{
   display:block;
   font-weight:800;
   font-size:14px;
   margin-bottom:6px;
 }
-
 input,
 select,
 textarea{
@@ -415,21 +345,17 @@ textarea{
   background:#fff;
   font:inherit;
 }
-
 textarea{
   min-height:130px;
   resize:vertical;
 }
-
 button{
   width:100%;
   border:0;
   cursor:pointer;
   font:inherit;
 }
-
 /* WHATSAPP */
-
 .whatsapp{
   position:fixed;
   right:18px;
@@ -445,9 +371,7 @@ button{
   box-shadow:0 8px 25px rgba(0,0,0,.22);
   z-index:200;
 }
-
 /* FOOTER */
-
 footer{
   background:#091a2c;
   color:#b9c7d5;
@@ -455,527 +379,326 @@ footer{
   padding:35px 0;
   font-size:14px;
 }
-
 /* MOVIL */
-
 @media(max-width:850px){
-
   .menu{
     display:none;
   }
-
   .hero{
     padding:65px 0;
   }
-
   .hero-grid,
   .feature,
   .contact-grid{
     grid-template-columns:1fr;
   }
-
   .hero-card{
     display:none;
   }
-
   .service-grid{
     grid-template-columns:1fr 1fr;
   }
 }
-
 @media(max-width:560px){
-
   section{
     padding:60px 0;
   }
-
   h1{
     font-size:45px;
   }
-
   .service-grid{
     grid-template-columns:1fr;
   }
-
   .section-title h2,
   .feature h2,
   .contact-info h2{
     font-size:34px;
   }
-
   .buttons{
     flex-direction:column;
   }
-
   .buttons .btn{
     text-align:center;
   }
 }
 </style>
 </head>
-
 <body>
-
 <header>
-
   <div class="container">
-
     <nav>
-
       <div class="logo">
         HOGAR <span>BOOST</span>
       </div>
-
       <div class="menu">
-
         <a href="#servicios">Servicios</a>
-
         <a href="#nosotros">Nosotros</a>
-
         <a href="#zonas">Zonas</a>
-
         <a href="#faq">Preguntas</a>
-
         <a href="#contacto" class="nav-button">
           Presupuesto
         </a>
-
       </div>
-
     </nav>
-
   </div>
-
 </header>
-
 <main>
-
-<!-- INICIO -->
-
 <section class="hero">
-
   <div class="container hero-grid">
-
     <div>
-
       <span class="badge">
         MADRID · TOLEDO · SERVICIOS PARA TU HOGAR
       </span>
-
       <h1>
         Todo lo que tu hogar necesita, en un solo lugar.
       </h1>
-
       <p class="hero-text">
         Fontanería, electricidad, calefacción, calderas,
         climatización, mantenimiento y reparaciones para tu vivienda.
       </p>
-
       <div class="buttons">
-
         <a class="btn btn-primary" href="#contacto">
           Solicitar presupuesto
         </a>
-
         <a class="btn btn-outline" href="#servicios">
           Ver nuestros servicios
         </a>
-
       </div>
-
     </div>
-
     <div class="hero-card">
-
       <h2>Hogar Boost</h2>
-
       <p>
         Servicios integrales para ayudarte con el mantenimiento,
         reparación y mejora de tu hogar.
       </p>
-
       <div class="quick">
-
         <div>🔥 Calderas y calefacción</div>
-
         <div>⚡ Electricidad</div>
-
         <div>💧 Fontanería</div>
-
         <div>❄️ Climatización</div>
-
         <div>🔧 Reparaciones</div>
-
       </div>
-
     </div>
-
   </div>
-
 </section>
-
-<!-- SERVICIOS -->
-
 <section id="servicios" class="services">
-
   <div class="container">
-
     <div class="section-title">
-
       <h2>Nuestros servicios</h2>
-
       <p>
         Soluciones para el mantenimiento y reparación de tu vivienda.
       </p>
-
     </div>
-
     <div class="service-grid">
-
       <article class="service">
-
         <div class="service-icon">🔥</div>
-
         <h3>Calderas y calefacción</h3>
-
         <p>
           Mantenimiento, revisión y reparación de sistemas
           de calefacción y calderas.
         </p>
-
       </article>
-
       <article class="service">
-
         <div class="service-icon">⚡</div>
-
         <h3>Electricidad</h3>
-
         <p>
           Averías, enchufes, iluminación, instalaciones
           y diferentes trabajos eléctricos.
         </p>
-
       </article>
-
       <article class="service">
-
         <div class="service-icon">💧</div>
-
         <h3>Fontanería</h3>
-
         <p>
           Fugas, grifos, sanitarios, tuberías y reparaciones
           de fontanería.
         </p>
-
       </article>
-
       <article class="service">
-
         <div class="service-icon">❄️</div>
-
         <h3>Climatización</h3>
-
         <p>
           Mantenimiento y soluciones relacionadas con aire
           acondicionado y climatización.
         </p>
-
       </article>
-
       <article class="service">
-
         <div class="service-icon">🛠️</div>
-
         <h3>Reparaciones</h3>
-
         <p>
           Diferentes trabajos de reparación y mantenimiento
           para tu vivienda.
         </p>
-
       </article>
-
       <article class="service">
-
         <div class="service-icon">🏠</div>
-
         <h3>Mantenimiento del hogar</h3>
-
         <p>
           Una solución coordinada para diferentes necesidades
           de mantenimiento de tu hogar.
         </p>
-
       </article>
-
     </div>
-
   </div>
-
 </section>
-
-<!-- NOSOTROS -->
-
 <section id="nosotros">
-
   <div class="container feature">
-
     <div>
-
       <h2>
         Tu hogar en buenas manos.
       </h2>
-
       <p class="feature-text">
         En Hogar Boost queremos facilitarte el mantenimiento
         de tu vivienda ofreciendo diferentes servicios desde
         un único contacto.
       </p>
-
       <div class="checks">
-
         <div class="check">
           <strong>✓</strong>
           <span>Atención personalizada</span>
         </div>
-
         <div class="check">
           <strong>✓</strong>
           <span>Presupuestos claros antes de realizar el trabajo</span>
         </div>
-
         <div class="check">
           <strong>✓</strong>
           <span>Diferentes servicios para tu vivienda</span>
         </div>
-
         <div class="check">
           <strong>✓</strong>
           <span>Servicio en todos los municipios de Madrid y Toledo</span>
         </div>
-
       </div>
-
     </div>
-
     <div class="info-card">
-
       <h3>
         ¿Tienes una avería?
       </h3>
-
       <p>
         Cuéntanos qué necesitas y contactaremos contigo para
         conocer el trabajo y estudiar la mejor solución.
       </p>
-
       <a class="btn btn-primary" href="#contacto">
         Pedir presupuesto
       </a>
-
     </div>
-
   </div>
-
 </section>
-
-<!-- ZONAS -->
-
 <section id="zonas" class="zones">
-
   <div class="container">
-
     <div class="section-title">
-
       <h2>Zonas de servicio</h2>
-
       <p>
         Prestamos nuestros servicios en todos los municipios
         de la Comunidad de Madrid y de la provincia de Toledo.
       </p>
-
     </div>
-
     <div class="zone-list">
-
       <span class="zone">
         Todos los municipios de Madrid
       </span>
-
       <span class="zone">
         Todos los municipios de Toledo
       </span>
-
     </div>
-
   </div>
-
 </section>
-
-<!-- PREGUNTAS -->
-
 <section id="faq">
-
   <div class="container">
-
     <div class="section-title">
-
       <h2>Preguntas frecuentes</h2>
-
       <p>
         Algunas preguntas habituales sobre nuestros servicios.
       </p>
-
     </div>
-
     <div class="faq">
-
       <details>
-
-        <summary>
-          ¿Qué servicios ofrece Hogar Boost?
-        </summary>
-
+        <summary>¿Qué servicios ofrece Hogar Boost?</summary>
         <p>
           Ofrecemos servicios de fontanería, electricidad,
           calefacción, calderas, climatización, mantenimiento
           y reparaciones del hogar.
         </p>
-
       </details>
-
       <details>
-
-        <summary>
-          ¿En qué zonas trabajáis?
-        </summary>
-
+        <summary>¿En qué zonas trabajáis?</summary>
         <p>
           Prestamos servicio en todos los municipios de la
           Comunidad de Madrid y de la provincia de Toledo.
         </p>
-
       </details>
-
       <details>
-
-        <summary>
-          ¿Puedo solicitar un presupuesto?
-        </summary>
-
+        <summary>¿Puedo solicitar un presupuesto?</summary>
         <p>
           Sí. Puedes utilizar el formulario de contacto o
           escribirnos directamente por WhatsApp.
         </p>
-
       </details>
-
       <details>
-
-        <summary>
-          ¿Cómo puedo contactar con Hogar Boost?
-        </summary>
-
+        <summary>¿Cómo puedo contactar con Hogar Boost?</summary>
         <p>
           Puedes contactar con nosotros por teléfono, WhatsApp
           o mediante el formulario de presupuesto de esta página.
         </p>
-
       </details>
-
     </div>
-
   </div>
-
 </section>
-
-<!-- CONTACTO -->
-
 <section id="contacto" class="contact">
-
   <div class="container contact-grid">
-
     <div class="contact-info">
-
       <h2>
         Cuéntanos qué necesitas.
       </h2>
-
       <p>
         Rellena el formulario y explícanos brevemente qué trabajo
         necesitas realizar en tu hogar.
       </p>
-
       <p>
         <strong>Hogar Boost</strong><br>
         Servicios integrales del hogar<br>
         Madrid · Toledo
       </p>
-
       <a class="contact-link" href="tel:+34654630623">
         📞 654 63 06 23
       </a>
-
       <br>
-
       <a
         class="contact-link"
         href="https://wa.me/34654630623?text=Hola%20Hogar%20Boost%2C%20necesito%20un%20presupuesto."
         target="_blank"
         rel="noopener">
-
         💬 Contactar por WhatsApp
-
       </a>
-
     </div>
-
     <form
       action="https://formsubmit.co/serviciosintegralesdelhogar82@gmail.com"
       method="POST">
-
       <input
         type="hidden"
         name="_subject"
         value="Nueva solicitud de presupuesto - Hogar Boost">
-
       <input
         type="hidden"
         name="_captcha"
         value="false">
-
-      <label for="nombre">
-        Nombre
-      </label>
-
+      <label for="nombre">Nombre</label>
       <input
         id="nombre"
         required
         type="text"
         name="nombre"
         placeholder="Tu nombre">
-
-      <label for="telefono">
-        Teléfono
-      </label>
-
+      <label for="telefono">Teléfono</label>
       <input
         id="telefono"
         required
         type="tel"
         name="telefono"
         placeholder="Tu teléfono">
-
-      <label for="servicio">
-        Servicio
-      </label>
-
-      <select
-        id="servicio"
-        name="servicio">
-
+      <label for="servicio">Servicio</label>
+      <select id="servicio" name="servicio">
         <option>Calderas y calefacción</option>
         <option>Electricidad</option>
         <option>Fontanería</option>
@@ -983,55 +706,32 @@ footer{
         <option>Reparaciones</option>
         <option>Mantenimiento del hogar</option>
         <option>Otro</option>
-
       </select>
-
-      <label for="mensaje">
-        ¿Qué necesitas?
-      </label>
-
+      <label for="mensaje">¿Qué necesitas?</label>
       <textarea
         id="mensaje"
         name="mensaje"
         placeholder="Cuéntanos brevemente el problema o trabajo..."></textarea>
-
       <button
         class="btn btn-primary"
         type="submit">
-
         Solicitar presupuesto
-
       </button>
-
     </form>
-
   </div>
-
 </section>
-
 </main>
-
-<!-- WHATSAPP -->
-
 <a
   class="whatsapp"
   href="https://wa.me/34654630623?text=Hola%20Hogar%20Boost%2C%20necesito%20un%20presupuesto."
   target="_blank"
   rel="noopener"
   aria-label="Contactar por WhatsApp">
-
   ☏
-
 </a>
-
 <footer>
-
   © 2026 Hogar Boost · Servicios integrales del hogar · Madrid y Toledo
-
 </footer>
-
-<!-- INFORMACIÓN PARA GOOGLE -->
-
 <script type="application/ld+json">
 {
   "@context":"https://schema.org",
@@ -1061,6 +761,5 @@ footer{
   ]
 }
 </script>
-
 </body>
 </html>
